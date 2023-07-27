@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "main": "index.js",
   "license":"MIT",
+  "type": "module",
   "dependencies": {
     "@prisma/client": "^5.0.0",
     "cookie-parser": "^1.4.6",
