@@ -4,6 +4,10 @@
   "main": "index.js",
   "license":"MIT",
   "type": "module",
+
+  "scripts": {
+    "start": "nodemon index.js"
+  },
   "dependencies": {
     "@prisma/client": "^5.0.0",
     "cookie-parser": "^1.4.6",
