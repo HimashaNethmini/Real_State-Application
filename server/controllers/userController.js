@@ -14,6 +14,6 @@ export const createUser = asyncHandler(async(req,res) => {
             message: "User registered successfully",
             user: user,
         });
-    }else res.send(201).json({message: "User already exist"});
+    }else res.send(201).send({message: "User already exist"});
 
 });
