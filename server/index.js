@@ -2,6 +2,7 @@ import express from "express";
 import cookieParser from "cookie-parser";
 import dotenv from "dotenv";
 import cors from "cors";
+import { userRoute } from "./routes/userRoute.js";
 
 //configuration of dotenv
 dotenv.config()
@@ -19,4 +20,6 @@ app.use(cors())
 
 app.listen(PORT, ()=> {
     console.log(`Server is running on ${PORT}`);
-})
+});
+
+app.use('/api/user', userRoute)
