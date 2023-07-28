@@ -11,7 +11,7 @@ model User {
     id String @id @default(auto()) @map("_id") @db.ObjectId
     name String?
     email String @unique
-    image String
+    image String?
     bookedVisits Json[]
     favResidenciesId String [] @db.ObjectId
     ownedResidencies Residence[] @relation("Owner")
