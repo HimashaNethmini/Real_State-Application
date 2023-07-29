@@ -56,7 +56,11 @@ export const getAllResidency = asyncHandler(async (req, res) => {
   
     try {
       const residence = await prisma.residency.findUnique({
-        where: { id },
+        where: { 
+          id: {
+            equals: id,
+          },
+         }, //where id of the document = id we send thru the parameters
       });
       res.send(residence);
     } catch (err) {
