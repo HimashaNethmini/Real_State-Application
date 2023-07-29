@@ -90,3 +90,41 @@ export const getAllBookings = asyncHandler(async (req, res) => {
         throw new Error(err.message);
     }
   });
+
+  //function to add & delete residence into favourite list of the user
+  export const toFav = asyncHandler(async(req,res)=>{
+    const {email} = req.body;
+    const {rid} = req.params; //residence ID
+    try{
+
+        const user = await prisma.user.findUnique({
+            where: {email}
+        })
+
+        if (user.favResidenciesId.includes(rid)) { //checking if it's already in the fav list
+            const updateUser = await prisma.user.update({
+                where: {email}, //select email whose email = targeted user
+                data: { //set data
+                    favResidenciesId : {
+                        set: user.favResidenciesId.filter((id)=> id !== rid)
+                    }
+                }
+            });
+            res.send({message: "Removed from favourite", user: updateUser})
+        } else {
+            const updateUser = await prisma.user.update ({
+                where: {email},
+                data: {
+                    favResidenciesId: {
+                        push: rid
+                    }
+                }
+            });
+            res.send({message: "Updated favourite", user:updateUser})
+        }
+
+    }catch (err) {
+        throw new Error(err.message);
+    }
+  });
+  
