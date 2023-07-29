@@ -1,5 +1,5 @@
 import express from "express";
-import { bookVisit, cancelBooking, createUser, getAllBookings } from "../controllers/userController.js";
+import { bookVisit, cancelBooking, createUser, getAllBookings, getAllFavourites, toFav } from "../controllers/userController.js";
 
 //making an express object
 const router = express.Router()
@@ -8,4 +8,7 @@ router.post("/bookVisit/:id", bookVisit); //allocate booking based on residence 
 router.get("//allBookings", getAllBookings);
 router.post("/removeBooking/:id", cancelBooking);
 
+//favourite routes
+router.post("/favadd", toFav);
+router.get("/getallFav", getAllFavourites);
 export { router as userRoute}
