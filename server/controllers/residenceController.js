@@ -50,7 +50,7 @@ export const getAllResidency = asyncHandler(async (req, res) => {
     res.send(residence);
   });
   
-  // function to get a specific document/residency
+  // function to get a specific document/residency filer by id
   export const getAllResidencies = asyncHandler(async (req, res) => {
     const { id } = req.params;
   
