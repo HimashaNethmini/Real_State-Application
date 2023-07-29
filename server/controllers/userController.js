@@ -127,4 +127,17 @@ export const getAllBookings = asyncHandler(async (req, res) => {
         throw new Error(err.message);
     }
   });
-  
+
+  //retrieve all favourite
+  export const getAllFavourites = asyncHandler(async(req,res)=>{
+    const {email} = req.body;
+    try{
+        const favResd = await prisma.user.findUnique({
+            where: {email},
+            select: {favResidenciesId: true},
+        });
+        res.status(200).send(favResd);
+    }catch (err){
+        throw new Error(err.message);
+    }
+  });
