@@ -19,7 +19,8 @@
 .menu-icon {
   display: none;
 }
-
+ /*media*/
+ 
 @media (max-width: 768px) {
   .menu-icon {
     display: block;
