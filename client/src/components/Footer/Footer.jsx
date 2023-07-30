@@ -4,7 +4,7 @@ const Footer = () => {
   return (
     <div className="f-wrapper">
       <div className="paddings innerWidth flexCenter f-container">
-        {/* left side */}
+        {/* left side of the footer */}
         <div className="flexColStart f-left">
           <img src="./logo2.png" alt="" width={120} />
           <span className="secondaryText">
