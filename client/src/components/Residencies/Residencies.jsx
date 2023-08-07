@@ -14,7 +14,7 @@ const Residencies = () => {
           <span className="primaryText">Popular Residencies</span>
         </div>
         <Swiper {...sliderSettings}>
-          <SlideNextButton />
+          <SlideNextButton />   {/*add slider buttons*/}
           
           {/* make the slider */}
           {data.map((card, i) => (
