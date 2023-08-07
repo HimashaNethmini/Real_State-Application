@@ -28,7 +28,7 @@ const Hero = () => {
             <span>Find a variety of properties that suit you very easilty</span>
             <span>Forget all difficulties in finding a residence for you</span>
           </div>
-
+{/*search bar added */}
           <div className="flexCenter search-bar">
             <HiLocationMarker color="var(--blue)" size={25} />
             <input type="text" />
