@@ -21,6 +21,7 @@
   width: 100%;
   max-width: 15rem;
 }
+
 .r-card > :nth-child(2) {
   font-size: 1.2rem;
   font-weight: 600;
