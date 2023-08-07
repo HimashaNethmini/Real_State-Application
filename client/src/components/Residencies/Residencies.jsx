@@ -15,7 +15,8 @@ const Residencies = () => {
         </div>
         <Swiper {...sliderSettings}>
           <SlideNextButton />
-          {/* slider */}
+          
+          {/* make the slider */}
           {data.map((card, i) => (
             <SwiperSlide key={i}>
               <div className="flexColStart r-card">
