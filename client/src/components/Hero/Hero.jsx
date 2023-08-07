@@ -34,7 +34,7 @@ const Hero = () => {
             <input type="text" />
             <button className="button">Search</button>
           </div>
-
+{/*number stats*/}
           <div className="flexCenter stats">
             <div className="flexColCenter stat">
               <span>
