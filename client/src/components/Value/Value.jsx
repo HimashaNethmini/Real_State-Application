@@ -21,6 +21,7 @@ const Value = () => {
   return (
     <section id="value" className="v-wrapper">
       <div className="paddings innerWidth flexCenter v-container">
+        
         {/* left side */}
         <div className="v-left">
           <div className="image-container">
