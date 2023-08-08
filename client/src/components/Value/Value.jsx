@@ -21,7 +21,7 @@ const Value = () => {
   return (
     <section id="value" className="v-wrapper">
       <div className="paddings innerWidth flexCenter v-container">
-        
+
         {/* left side */}
         <div className="v-left">
           <div className="image-container">
@@ -46,6 +46,7 @@ const Value = () => {
             allowMultipleExpanded={false}
             preExpanded={[0]}
           >
+            
             {data.map((item, i) => {
               const [className, setClassName] = useState(null);
               return (
