@@ -13,9 +13,11 @@
 .h-menu {
   gap: 2rem;
 }
+
 .h-menu > *:hover {
   cursor: pointer;
 }
+
 .menu-icon {
   display: none;
 }

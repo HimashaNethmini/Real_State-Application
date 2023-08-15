@@ -51,5 +51,6 @@ const SlideNextButton = () => {
         &gt;
       </button>
     </div>
+    
   );
 };
