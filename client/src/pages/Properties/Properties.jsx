@@ -3,7 +3,7 @@ import './Properties.css';
 
 const Properties = () => {
   return (
-    <div>
+    <div className='wrapper'>
       
     </div>
   )
