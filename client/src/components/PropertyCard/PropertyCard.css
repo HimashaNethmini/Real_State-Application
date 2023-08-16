@@ -6,7 +6,14 @@
     margin: auto;
     transition: all 300ms ease-in;
   }
-  
+  .r-card>svg {
+    color: red;
+    position: absolute;
+    top: 165px;
+    right: 25px;
+    z-index: 1;
+  }
+
   .r-card > img {
     width: 100%;
     max-width: 15rem;
