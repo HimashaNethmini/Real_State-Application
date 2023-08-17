@@ -1,10 +1,12 @@
 import React, { Suspense } from "react";
 import "./App.css";
-import Website from "./pages/Website";
 import Layout from "./components/Layout/Layout";
+
+import Website from "./pages/Website";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Properties from "./pages/Properties/Properties";
 import { QueryClient, QueryClientProvider } from 'react-query';
+import { ReactQueryDevtools } from "react-query/devtools";
 import { ToastContainer } from "react-toastify";
 
 function App() {
@@ -23,6 +25,7 @@ function App() {
         </Suspense>
       </BrowserRouter>
       <ToastContainer/>
+      <ReactQueryDevtools initialIsOpen = { false } />
     </QueryClientProvider>
   );
 }
