@@ -5,6 +5,7 @@ import Layout from "./components/Layout/Layout";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Properties from "./pages/Properties/Properties";
 import { QueryClient, QueryClientProvider } from 'react-query';
+import { ToastContainer } from "react-toastify";
 
 function App() {
   const queryClient = new QueryClient();
@@ -21,6 +22,7 @@ function App() {
           </Routes>
         </Suspense>
       </BrowserRouter>
+      <ToastContainer/>
     </QueryClientProvider>
   );
 }
