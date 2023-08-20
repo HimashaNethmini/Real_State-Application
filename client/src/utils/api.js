@@ -58,6 +58,27 @@ export const createUser = async (email,token) => {
     }
 };
 
+//create new residencies
+export const createResidency = async (data, token) => {
+    console.log(data)
+    try{
+      const res = await api.post(
+        `/residency/create`,
+        {
+          data
+        },
+        {
+          headers: {
+            Authorization: `Bearer ${token}`,
+          },
+        }
+      )
+    }catch(error)
+    {
+      throw error
+    }
+  }
+
 //book visit
 export const bookVisit = async ( date, propertyId, email, token ) => {
     try {
@@ -124,7 +145,7 @@ export const getAllBookings = async (email, token) => {
       throw error
     }
   }
-  
+
 
 //add favourite 
 export const toFav = async (id, email, token) => {
