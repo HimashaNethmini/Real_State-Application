@@ -12,7 +12,7 @@ export const getAllProperties = async () => {
             timeout: 10 * 1000,
         });
 
-        if (response.status===400 || response.status===500) {
+        if (response.status=== 400 || response.status=== 500) {
             throw response.data
         }
         return response.data;

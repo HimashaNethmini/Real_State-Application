@@ -1,7 +1,7 @@
 import asyncHandler from "express-async-handler";
 import { prisma } from "../config/PrismaConfig.js";
 
-export const createResidence = asyncHandler(async(req, res) => {
+export const createResidency = asyncHandler(async(req, res) => {
     const {
         title, 
         description,
@@ -16,7 +16,7 @@ export const createResidence = asyncHandler(async(req, res) => {
         console.log(req.body.data);
         try {
 
-            const residence = await prisma.residence.create({
+            const residency = await prisma.residency.create({
                 data: {
                     title,
                     description,
@@ -30,7 +30,7 @@ export const createResidence = asyncHandler(async(req, res) => {
                 },
             });
 
-            res.send({ message: "Residence created successfully",residence });
+            res.send({ message: "Residency created successfully",residency });
 
         }catch (err) {
             if(err.code === "P2002") {
@@ -41,28 +41,28 @@ export const createResidence = asyncHandler(async(req, res) => {
 });
 
 // function to get all the documents/residencies
-export const getAllResidency = asyncHandler(async (req, res) => {
-    const residence = await prisma.residence.findMany({
+export const getAllResidencies = asyncHandler(async (req, res) => {
+    const residencies = await prisma.residency.findMany({
       orderBy: {
         createdAt: "desc",
       },
     });
-    res.send(residence);
+    res.send(residencies);
   });
   
   // function to get a specific document/residency filer by id
-  export const getAllResidencies = asyncHandler(async (req, res) => {
+  export const getResidency = asyncHandler(async (req, res) => {
     const { id } = req.params;
   
     try {
-      const residence = await prisma.residency.findUnique({
+      const residency = await prisma.residency.findUnique({
         where: { 
           id: {
             equals: id,
           },
          }, //where id of the document = id we send thru the parameters
       });
-      res.send(residence);
+      res.send(residency);
     } catch (err) {
       throw new Error(err.message);
     }
