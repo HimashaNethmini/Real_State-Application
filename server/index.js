@@ -24,4 +24,4 @@ app.listen(PORT, ()=> {
 });
 
 app.use('/api/user', userRoute)
-app.use('/api/residence', residenceRoute)
+app.use('/api/residency', residenceRoute)
