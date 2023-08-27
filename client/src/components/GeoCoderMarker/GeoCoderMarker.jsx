@@ -2,7 +2,8 @@ import React, { useEffect, useState } from 'react';
 import { Marker, Popup, useMap } from 'react-leaflet';
 import L from 'leaflet';
 import "leaflet/dist/leaflet.css"
-import icon from "leaflet/dist/images/marker-shadow.png"
+import icon from "leaflet/dist/images/marker-icon.png"
+import iconShadow from "leaflet/dist/images/marker-shadow.png"
 import * as ELG from 'esri-leaflet-geocoder'
 
 let DefaulIcon = L.icon ({
