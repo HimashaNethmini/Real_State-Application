@@ -10,6 +10,9 @@
   },
   "dependencies": {
     "@auth0/auth0-react": "2.0.1",
+    "@mantine/core": "^6.0.19",
+    "@mantine/form": "^6.0.19",
+    "@mantine/hooks": "^6.0.19",
     "axios": "^1.4.0",
     "dayjs": "^1.11.9",
     "esri-leaflet-geocoder": "2.3.3",
