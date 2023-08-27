@@ -11,7 +11,8 @@ const Header = () => {
   const [menuOpened, setMenuOpened] = useState(false);
   const headerColor = useHeaderColor();
   //adding auth0 to login function
-  const { loginWithRedirect } = useAuth0()
+  //authenciation
+  const { loginWithRedirect, isAuthenticated, user, logout } = useAuth0();
 
   return (
     <section className="h-wrapper" style={{ background: headerColor }}>
@@ -37,9 +38,14 @@ const Header = () => {
             <a href="himashanethmini24@gmail.com">Contact</a>
 
             {/*login button */}
-            <button className="button" onClick = {loginWithRedirect}>
-              Login
-            </button>
+{/* if the user is authenticated, show his profile */}
+            {!isAuthenticated ? (
+                <button className="button" onClick = {loginWithRedirect}>
+                  Login
+                </button>
+            ) : (
+                <div> User profile </div>
+              )}
           </div>
         </OutsideClickHandler>
 
