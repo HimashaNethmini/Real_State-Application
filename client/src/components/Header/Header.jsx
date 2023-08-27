@@ -5,10 +5,13 @@ import { BiMenuAltRight } from "react-icons/bi";
 import { getMenuStyles } from "../../utils/common";
 import useHeaderColor from "../../hooks/useHeaderColor";
 import OutsideClickHandler from "react-outside-click-handler";
+import { useAuth0 } from "@auth0/auth0-react";
 
 const Header = () => {
   const [menuOpened, setMenuOpened] = useState(false);
   const headerColor = useHeaderColor();
+  //adding auth0 to login function
+  const { loginWithRedirect } = useAuth0()
 
   return (
     <section className="h-wrapper" style={{ background: headerColor }}>
@@ -34,7 +37,9 @@ const Header = () => {
             <a href="himashanethmini24@gmail.com">Contact</a>
 
             {/*login button */}
-            <button className="button">Login</button>
+            <button className="button" onClick = {loginWithRedirect}>
+              Login
+            </button>
           </div>
         </OutsideClickHandler>
 
