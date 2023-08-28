@@ -1,10 +1,18 @@
-import React from 'react'
+import React from 'react';
+import { Avatar, Menu } from '@mantine/core'
 
-const ProfileMenu = () => {
+const ProfileMenu = ( {user, logout}) => {
   return (
-    <div>
-      
-    </div>
+    <Menu>
+      <Menu.Target>
+        <Avatar src= {user?.picture} alt='user image' radius={"xl"} />
+      </Menu.Target>
+      <Menu.Dropdown>
+        <Menu.Item>
+          Favourites
+        </Menu.Item>
+      </Menu.Dropdown>
+    </Menu>
   )
 }
 
