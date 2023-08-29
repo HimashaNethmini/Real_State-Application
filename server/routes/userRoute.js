@@ -1,9 +1,9 @@
 import express from "express";
 import { bookVisit, cancelBooking, createUser, getAllBookings, getAllFavourites, toFav } from "../controllers/userController.js";
-
+import jwtCheck from "../../server/config/auth0Configure.js";
 //making an express object
 const router = express.Router()
-router.post ("/register", createUser); //create the user inside the usercontroller.js
+router.post ("/register", jwtCheck, createUser); //create the user inside the usercontroller.js
 router.post("/bookVisit/:id", bookVisit); //allocate booking based on residence id
 router.post("//allBookings", getAllBookings);
 router.post("/removeBooking/:id", cancelBooking);
