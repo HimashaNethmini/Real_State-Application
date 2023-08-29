@@ -10,16 +10,30 @@ import { createUser } from "../../utils/api";
 
 const Layout = () => {
 
-  const {isAuthenticated, user} = useAuth0()
+  const {isAuthenticated, user, getAccessTokenWithPopup} = useAuth0()
   const { setUserDetails} = useContext(UserDetailContext)
 
   const {mutate} = useMutation({
     mutationKey: [user?.email],
-    mutationFn: () => createUser(user?.email)
+    mutationFn: () => createUser(user?.email, token)
   })
 
   useEffect(()=> {
-    isAuthenticated && mutate()
+
+    const getTokenAndRegister = async ()=> {
+
+      const res = await getAccessTokenWithPopup({
+        authorizationParams: {
+          audience: "http://localhost:8000",
+          scope: "openid profile email"
+        }
+      });
+      localStorage.setItem("access_token", res);
+      setUserDetails((prev)=> ({...prev, token: res }));
+      mutate(res)
+    }
+
+    isAuthenticated && getTokenAndRegister()
   }, [isAuthenticated])
 
   return (
