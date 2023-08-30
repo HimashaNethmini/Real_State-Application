@@ -129,7 +129,7 @@ const Property = () => {
               </span>
             </div>
 
-            {/* booking button */}
+            {/* cancelling & adding booking button */}
             {bookings?.map((booking) => booking.id).includes(id) ? (
               <>
                 <Button
