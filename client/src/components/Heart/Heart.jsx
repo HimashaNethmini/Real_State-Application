@@ -22,7 +22,7 @@ const Heart = ({id}) => {
             setHeartColor(()=> checkFavourites(id, favourites))
       },[favourites])
 
-//add heart
+//add heart after login
     const {mutate} = useMutation({
         mutationFn: () => toFav(id, user?.email, token),
         onSuccess: ()=> {
