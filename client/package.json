@@ -12,6 +12,7 @@
     "@auth0/auth0-react": "2.0.1",
     "@emotion/react": "^11.11.1",
     "@mantine/core": "^6.0.19",
+    "@mantine/dates": "^6.0.19",
     "@mantine/form": "^6.0.19",
     "@mantine/hooks": "^6.0.19",
     "axios": "^1.4.0",
