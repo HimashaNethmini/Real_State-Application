@@ -41,7 +41,7 @@ const Facilities = ({
     }
   };
 
-  // ==================== upload logic
+  // ==================== upload logic===================
   const { user } = useAuth0();
   const {
     userDetails: { token },
