@@ -41,6 +41,7 @@ const AddPropertyModal = ({ opened, setOpened }) => {
       closeOnClickOutside
       size={"90rem"}
     >
+      
       <Container h={"40rem"} w={"100%"}>
         <Stepper
           active={active}
