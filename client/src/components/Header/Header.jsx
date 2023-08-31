@@ -14,6 +14,7 @@ const Header = () => {
   const [menuOpened, setMenuOpened] = useState(false);
   const headerColor = useHeaderColor();
   const [modalOpened, setModalOpened] = useState(false);
+  
   //adding auth0 to login function
   //authenciation
   const { loginWithRedirect, isAuthenticated, user, logout } = useAuth0();

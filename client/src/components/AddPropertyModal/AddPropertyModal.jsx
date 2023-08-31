@@ -1,10 +1,10 @@
 import { Container, Modal, Stepper } from "@mantine/core";
 import React, { useState } from "react";
-//import AddLocation from "../AddLocation/AddLocation";
+import AddLocation from "../AddLocation/AddLocation";
 import { useAuth0 } from "@auth0/auth0-react";
-//import UploadImage from "../UploadImage/UploadImage";
-//import BasicDetails from "../BasicDetails/BasicDetails";
-//import Facilities from "../Facilities/Facilities";
+import UploadImage from "../UploadImage/UploadImage";
+import BasicDetails from "../BasicDetails/BasicDetails";
+import Facilities from "../Facilities/Facilities";
 
 const AddPropertyModal = ({ opened, setOpened }) => {
   const [active, setActive] = useState(0);
