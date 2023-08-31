@@ -15,6 +15,6 @@ const SearchBar = ({ filter, setFilter }) => {
       
     </div>
   )
-}
+};
 
 export default SearchBar;
