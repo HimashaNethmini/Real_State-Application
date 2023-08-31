@@ -4,7 +4,7 @@ import useAuthCheck from "../../hooks/useAuthCheck"
 import { useMutation } from "react-query"
 import { useAuth0 } from "@auth0/auth0-react"
 import UserDetailContext from "../../context/UserDetailContext"
-//import { checkFavourites, updateFavourites } from "../../utils/common"
+import { checkFavourites, updateFavourites } from "../../utils/common"
 import { toFav } from "../../utils/api"
 
 const Heart = ({id}) => {
@@ -35,11 +35,13 @@ const Heart = ({id}) => {
         }
     })
 
+    //validate user is login or not
+    // default heart colour white chnage into red
     const handleLike = () => {
         if(validateLogin())
         {
             mutate()
-            setHeartColor((prev)=> prev === "#fa3e5f" ? "red": "#fa3e5f")
+            setHeartColor((prev)=> prev === "#fa3e5f" ? "white": "#fa3e5f")
         }
     }
 
