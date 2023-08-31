@@ -27,4 +27,5 @@ const useBookings = () => {
   return { data, isError, isLoading, refetch };
 };
 
+
 export default useBookings;
