@@ -18,6 +18,7 @@ const Heart = ({id}) => {
         setUserDetails,
       } = useContext(UserDetailContext);
 
+      //setting the heart colour when it's favourite
       useEffect(()=> {
             setHeartColor(()=> checkFavourites(id, favourites))
       },[favourites])
